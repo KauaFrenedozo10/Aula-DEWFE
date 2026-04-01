@@ -1,0 +1,39 @@
+.titulo {
+    color: rgb(6, 6, 119);
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+}
+.subdesc {
+    display: flex;
+    justify-content: center;
+}
+.TitleCategorias {
+    color: rgb(6, 6, 119);
+    margin-left: 13%;
+    font-weight: bolder;
+}
+.linhas {
+    height: 4px;
+    width: 80rem;
+    background-color: rgb(6, 6, 119) ;
+    
+}
+.links {
+    text-decoration: none;
+    color: rgb(6, 6, 119);
+    margin-left: 13%;
+}
+.lightlinks {
+    text-decoration: none;
+    color: rgb(0, 247, 255);
+    margin-left: 13%;
+}
+.psubdesc {
+    font-weight: bold;
+    margin-left: 13%;
+    font-size: 20px;
+}
+.cursosEspecilizacao p {
+    margin-left: 13%;
+}
