@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="idade" placeholder="coloque sua idade" type="number">
+    <button onclick="Verificar()" >Verificar</button>
+    <h1 id="permitido"></h1>
+</body>
+<script>
+    function Verificar() {
+        entrada = document.getElementById('idade').value
+
+        if (entrada >= 18 ) {
+            document.getElementById('permitido').innerHTML = "Acesso Permitido"
+        }
+        else {
+            document.getElementById('permitido').innerHTML = "Acesso Negado"
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="numero" type="number" placeholder="Digite um número">
+    <br>
+    <button onclick="Calcular()">Calcular Fatorial</button>
+
+    <div id="resultado"></div>
+
+</body>
+<script>
+
+function Calcular() {
+    const numero = parseInt(document.getElementById("numero").value)
+    const resultado = document.getElementById("resultado")
+
+    let fatorial = 1
+    let passos = ""
+
+    for (let i = 1; i <= numero; i++) {
+        fatorial *= i
+        passos += i
+
+        if (i < numero) {
+            passos += " × "
+        }
+    }
+
+    resultado.innerHTML = `
+        ${numero}! = ${passos} <br>`
+}
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="altura" placeholder="altura" type="text">
+    <input id="peso" type="number" placeholder="peso">
+    <button onclick="Calcular()">Calcular</button>
+    <h1 id="resultado" ></h1>
+</body>
+
+<script>
+    function Calcular() {
+        const altura = parseFloat( document.getElementById('altura').value)
+        const peso = parseFloat( document.getElementById('peso').value)
+        resultado = peso / (altura * altura)
+        
+
+        if (resultado <= 18.5) {
+            document.getElementById('resultado').innerHTML = "Abaixo do peso"
+        }
+         else if (resultado > 18.5 && resultado <= 24.9) {
+            document.getElementById('resultado').innerHTML = "Peso normal"
+        }
+         else if(resultado > 24.9) {
+            document.getElementById('resultado').innerHTML = "Sobrepeso"
+        }
+    }
+    
+</script>
+</html>

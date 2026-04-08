@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input placeholder="digite nomes separados por virula" id="entrada" type="text">
+
+    <button onclick="Filtrar()">Filtrar</button>
+    <h1 id="resultado"></h1>
+</body>
+<script>
+function Filtrar() {
+
+    const entrada = document.getElementById('entrada').value
+    const lista = entrada.split(",")
+
+    let nomesValidos = []
+
+    for (let i = 0; i < lista.length; i++) {
+        let nome = lista[i].trim()
+
+        if (nome.length > 5) {
+            nomesValidos.push(nome)
+        }
+    }
+
+    const resultado = document.getElementById('resultado')
+
+    if (nomesValidos.length > 0) {
+        resultado.innerHTML = "Nomes válidos: <br>" + nomesValidos.join("<br>")
+    } else {
+        resultado.innerHTML = "Nenhum nome válido encontrado"
+    }
+}
+</script>
+</html>
